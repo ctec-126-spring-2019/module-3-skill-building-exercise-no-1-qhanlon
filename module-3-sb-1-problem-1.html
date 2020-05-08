@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Module 3 Skill Building No. 1 - Problem 1</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Module 3 Skill Building No. 1 - Problem 1</title>
+</head>
 
-    <body>
+<body>
 
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h1>Module 3 Skill Building No. 1 - Problem 1</h1>
-                    <button type="button" class="btn btn-success" onclick="startThings()">START</button>
-                    <div id="output" class="mt-5"></div>
-                </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1>Module 3 Skill Building No. 1 - Problem 1</h1>
+                <button type="button" class="btn btn-success" onclick="startThings()">START</button>
+                <div id="output" class="mt-5"></div>
             </div>
         </div>
+    </div>
 
-        <!-- Module 3 Skill Building Exercise 1 - Part 1 JavaScript -->
-        <script>
-            function startThings() {
-                let romanNumeral // do not modify
-                // your code goes here
-                // be sure to assign the roman numeral to the variable romanNumeral
-                // it will be used to display it on the web page using the code below
-
-
-
-                // do not modify start
-                let outputDiv = document.getElementById('output')
-                outputDiv.innerHTML = romanNumeral
-                // do not modify end
+    <!-- Module 3 Skill Building Exercise 1 - Part 1 JavaScript -->
+    <script>
+        function startThings() {
+            let romanNumeral; // do not modify
+            let number = parseInt(prompt("Please enter a number between one and ten."));
+            // your code goes here
+            if (number >= 1 && number <= 10) {
+                if (number === 1 || number === 2 || number === 3 || number === 4) {
+                    if (number === 1 || number === 2) {
+                        if (number === 1) {
+                            romanNumeral = "I";
+                        } else {
+                            romanNumeral = "II";
+                        }
+                    }
+                    if (number === 3 || number === 4) {
+                        if (number === 3) {
+                            romanNumeral = "III";
+                        } else {
+                            romanNumeral = "IV";
+                        }
+                    }
+                } else if (number === 5 || number === 6 || number === 7 || number === 8) {
+                    if (number === 5 || number === 6) {
+                        if (number === 5) {
+                            romanNumeral = "V";
+                        } else {
+                            romanNumeral = "VI";
+                        }
+                    }
+                    if (number === 7 || number === 8) {
+                        if (number === 7) {
+                            romanNumeral = "VII";
+                        } else {
+                            romanNumeral = "VIII";
+                        }
+                    }
+                } else if (number === 9) {
+                    romanNumeral = "IX";
+                } else {
+                    romanNumeral = "X";
+                }
+            } else {
+                alert("Please enter a valid number between one and ten.");
+                romanNumeral = "Try Again";
             }
-        </script>
-    </body>
+            // be sure to assign the roman numeral to the variable romanNumeral
+            // it will be used to display it on the web page using the code below
+
+
+
+            // do not modify start
+            let outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = romanNumeral;
+            // do not modify end
+        }
+    </script>
+</body>
 
 </html>
